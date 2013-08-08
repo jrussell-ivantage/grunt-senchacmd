@@ -27,7 +27,7 @@ If the plugin has been installed correctly, running `grunt --help` at the comman
 [Getting Started]: https://github.com/gruntjs/grunt/blob/devel/docs/getting_started.md
 [package.json]: https://npmjs.org/doc/json.html
 
-## The "sencha_cmd" task
+## The "senchacmd" task
 
 ### Overview
 In your project's Gruntfile, add a section named `sencha_cmd` to the data object passed into `grunt.initConfig()`.
