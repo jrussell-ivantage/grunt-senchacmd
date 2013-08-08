@@ -30,11 +30,11 @@ If the plugin has been installed correctly, running `grunt --help` at the comman
 ## The "senchacmd" task
 
 ### Overview
-In your project's Gruntfile, add a section named `sencha_cmd` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `senchacmd` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  sencha_cmd: {
+  senchacmd: {
     options: {
       // Task-specific options go here.
     },
@@ -66,7 +66,7 @@ In this example, the default options are used to do something with whatever. So 
 
 ```js
 grunt.initConfig({
-  sencha_cmd: {
+  senchacmd: {
     options: {},
     files: {
       'dest/default_options': ['src/testing', 'src/123'],
@@ -80,7 +80,7 @@ In this example, custom options are used to do something else with whatever else
 
 ```js
 grunt.initConfig({
-  sencha_cmd: {
+  senchacmd: {
     options: {
       separator: ': ',
       punctuation: ' !!!',
