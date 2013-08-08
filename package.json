@@ -1,0 +1,39 @@
+{
+  "name": "grunt-senchacmd",
+  "description": "Build sencha applications with sencha.cmd",
+  "version": "0.2.0",
+  "homepage": "",
+  "private": true,
+  "author": {
+    "name": "iVantage Dev",
+    "email": "developer@ivantagehealth.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrussell-ivantage/grunt-senchacmd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jrussell-ivantage/grunt-senchacmd/issues"
+  },
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt-contrib-jshint": "~0.3.0",
+    "grunt-shell": "~0.2.1",
+    "grunt-senchacmd-tests": "git+https://github.com/jrussell-ivantage/grunt-senchacmd-tests.git#master"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
