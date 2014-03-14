@@ -61,24 +61,6 @@ Default value: `'production'`
 Built apps will be placed in the specified `buildRoot` under a folder for the
 given environment.
 
-### Usage Examples
-
-#### Default Options
-In this example, the default options are used to do something with whatever. So
-if the `testing` file has the content `Testing` and the `123` file had the
-content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
-```js
-grunt.initConfig({
-  senchacmd: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
-```
-
 ## Contributing
 NOTE: Licensing for this project has not yet been determined!
 
