@@ -2,9 +2,9 @@
 
 The license for project has not yet been determined.
 
-# grunt-sencha-cmd
+# grunt-senchacmd
 
-> Build sencha applications with sencha.cmd
+> A grunt wrapper for `sencha app build`
 
 ## Getting Started
 _If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide._
@@ -12,16 +12,20 @@ _If you haven't used [grunt][] before, be sure to check out the [Getting Started
 From the same directory as your project's [Gruntfile][Getting Started] and [package.json][], install this plugin with the following command:
 
 ```bash
-npm install grunt-sencha-cmd --save-dev
+npm install grunt-senchacmd --save-dev
 ```
 
 Once that's done, add this line to your project's Gruntfile:
 
 ```js
-grunt.loadNpmTasks('grunt-sencha-cmd');
+grunt.loadNpmTasks('grunt-senchacmd');
 ```
 
-If the plugin has been installed correctly, running `grunt --help` at the command line should list the newly-installed plugin's task or tasks. In addition, the plugin should be listed in package.json as a `devDependency`, which ensures that it will be installed whenever the `npm install` command is run.
+If the plugin has been installed correctly, running `grunt --help` at the
+command line should list the newly-installed plugin's task or tasks. In
+addition, the plugin should be listed in package.json as a `devDependency`,
+which ensures that it will be installed whenever the `npm install` command is
+run.
 
 [grunt]: http://gruntjs.com/
 [Getting Started]: https://github.com/gruntjs/grunt/blob/devel/docs/getting_started.md
@@ -30,39 +34,39 @@ If the plugin has been installed correctly, running `grunt --help` at the comman
 ## The "senchacmd" task
 
 ### Overview
-In your project's Gruntfile, add a section named `senchacmd` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `senchacmd` to the data object
+passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
   senchacmd: {
     options: {
-      // Task-specific options go here.
+      environment: 'production'
     },
     your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
+      appName: 'MyApp',          // Name of the app you're building
+      appRoot: 'path/to/myapp',  // The working directory for your app
+      buildRoot: 'dist'          // Where built files will be placed
+    }
+  }
 })
 ```
 
 ### Options
 
-#### options.separator
+#### options.environment
 Type: `String`
-Default value: `',  '`
+Default value: `'production'`
 
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
+Built apps will be placed in the specified `buildRoot` under a folder for the
+given environment.
 
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+In this example, the default options are used to do something with whatever. So
+if the `testing` file has the content `Testing` and the `123` file had the
+content `1 2 3`, the generated result would be `Testing, 1 2 3.`
 
 ```js
 grunt.initConfig({
@@ -75,25 +79,12 @@ grunt.initConfig({
 })
 ```
 
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  senchacmd: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
-```
-
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt][].
+NOTE: Licensing for this project has not yet been determined!
+
+In lieu of a formal styleguide, take care to maintain the existing coding style.
+Add unit tests for any new or changed functionality. Lint and test your code
+using [grunt][].
 
 ## Release History
 _(Nothing yet)_
